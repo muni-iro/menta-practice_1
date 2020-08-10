@@ -1,0 +1,740 @@
+// utility
+$mainColor: #0A0A0A;
+
+.wrapp {
+    max-width: 1004px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+a{
+    color: $mainColor;
+}
+
+.section-ttl{
+    h2{
+        font-size: 4.8rem;
+        position: relative;
+        &:after{
+            content: '';
+            width: 69px;
+            height: 5px;
+            background-color: $mainColor;
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+        }
+    }
+
+    span{
+        display: block;
+        margin-top: 25px;
+        font-weight: bold;
+    }
+}
+// /utility
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    // =================[修正]sans-serifを加えました=================
+    font-family: Montserrat, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", sans-serif;;
+    -webkit-font-smoothing: antialiased;
+    color: $mainColor;
+    font-size: 1.6rem;
+    line-height: 1.25;
+}
+
+// =================[修正].headerに変えました=================
+.header{
+    position: relative;
+    background-image: url(../img/pc/hero-image.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    .logo{
+        display: inline-block;
+        padding: 36px 0 0 40px;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+
+        &-ttl{
+            display: inline-block;
+            font-size: 2rem;
+        }
+        &-content{
+            display: block;
+            font-size: 1.2rem;
+            margin-top: 8px;
+
+        }
+    }
+    .navber{
+        float: right;
+        list-style: none;
+        display: flex;
+        margin: 30px 27px 0 0;
+        li{
+            position: relative;
+            font-weight: 400;
+            margin-left: 63px;
+            a{
+                padding: 3px 0 3px;
+                color: #fff;
+                cursor: default;
+            }
+            &:before{
+                position: absolute;
+                bottom: -3px;
+                right: 50%;
+                content: '';
+                width: 0;
+                height: 3px;
+                background: #fff;
+                transition: all 0.2s ease;
+            }
+            &:after{
+                position: absolute;
+                bottom: -3px;
+                left: 50%;
+                content: '';
+                width: 0;
+                height: 3px;
+                background: #fff;
+                transition: all 0.2s ease;
+            }
+            &:hover:before{
+                width: 50%;
+            }
+            &:hover:after{
+                width: 50%;
+            }
+        }
+        
+    }
+    .humberger{
+        display: none;
+    }
+    .navber-sp{
+        display: none;
+    }
+
+    .heroImg{
+        .wrapp{
+            padding-top: 22%;
+            font-weight: bold;
+            h1{
+                font-size: 6.4rem;
+                line-height: 1.25;
+            }
+            p{
+                margin-top: 23px;
+                font-size: 2.4rem;
+                letter-spacing: 0.05em;
+            }
+            
+        }
+        .arrow{
+            &:after{
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                content: "\f078";
+                font-family: "Font Awesome 5 free";
+                font-size: 50px;
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+.about{
+ // =================[修正]flexに変えました=================
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 146px;
+
+    &-content{
+        max-width: 409px;
+        // min-width: 380px;
+        padding: 76px 68px 57px 67px;
+        box-sizing: border-box;
+        background-color: rgba(242, 242, 242, 0.8);
+        border: solid 1px #707070;
+
+        p{
+            margin-top: 35px;
+            font-size: 2.4rem;
+            font-weight: bold;
+        }
+        .about-txt{
+            display: block;
+            margin-top: 8px;
+            line-height: 2;
+            opacity: 1;
+        }
+    }        
+    &-img{
+        margin-left: 10px;
+    }
+}
+
+.item{
+    padding-top: 154px;
+    ul{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 23px;
+        li{
+ // =================[修正]widthを324pxのようにしっかりと指定する=================
+            width: 324px;
+            transition: all ease 0.3s;
+            
+            &:not(:first-of-type){
+                margin-left: 16px;
+            }
+
+            h3{
+                margin-top: 23px;
+            }
+            p{
+                margin-top: 40px;
+                font-size: 2.4rem;
+                font-weight: bold;
+            }
+            span{
+                display: block;
+                margin-top: 18px;
+                line-height: 2;
+            }
+            
+            &:nth-of-type(3){
+                span{
+                    text-align: center;
+                }
+            }
+
+            &:hover{
+                transform: scale(1.025);
+            }
+        }
+    }
+}
+
+.price{
+    padding-top: 193px;
+
+    .wrapp{
+        position: relative;
+    
+        .price-content{
+            padding: 55px 85px 67px;
+            max-width: 494px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: solid 5px #A38787;
+
+            .section-ttl{
+                text-align: center;
+
+                h2{
+                    &:after{
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+
+            dl{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 65px auto 0;
+                font-weight: bold;
+                line-height: 3;
+
+                dt:not(:last-of-type){
+                    width: 70%;
+                    border-bottom: dotted 1px #707070;
+                    text-align-last: left;
+                }
+                dd:not(:last-of-type){
+                    width: 30%;
+                    border-bottom: dotted 1px #707070;
+                    text-align: right;
+                }
+            }
+        }
+
+        .price-img{
+            position: absolute;
+            top: 93px;
+            right: 0;
+            z-index: -1;
+        }
+    }
+}
+
+.blog{
+    margin-top: 577px;
+    background-color: #F2F2F2;
+    padding: 136px 0 137px 0;
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+            // width: 324px;
+            width: calc((100% - 32px)/3);
+            margin-top: 62px;
+            transition: all ease 0.3s;
+
+            time{
+                display: block;
+                font-weight: bold;
+                margin-top: 29px;
+            }
+            span{
+                display: block;
+                margin-top: 10px;
+            } 
+            &:hover{
+                transform: scale(1.025);
+            }
+        }
+        // li:not(:first-of-type){
+        //     margin-left: 16px;
+        // }
+        li:nth-of-type(n+4){
+            display: none;
+        }
+    }
+}
+
+.access{
+    padding-top: 140px;
+
+    .map-wrapp{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    
+        dl{
+            margin-top: 93px;
+            flex-basis: 170px;
+            flex-shrink: 0;
+
+            dt{
+                font-size: 24px;
+                font-weight: bold;
+                &:not(:first-of-type){
+                    margin-top: 29px;
+                }
+            }
+            dd{
+                margin-top: 13px;
+            }
+        }
+        .map{
+            position: relative;
+            width: 664px;
+       
+            .map-inner{
+                padding-top: 63.4%;
+                height: 0;
+
+                iframe{
+                    position: absolute;
+                    top: 93px;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }  
+            }
+           
+        }
+    }
+
+    &-guide{
+        margin: 248px  auto 0;
+        max-width: 751px;
+    
+        h3{
+            font-size: 2.4rem;
+            font-weight: bold; 
+        }
+        ol{
+            margin-top: 31px;
+            letter-spacing: 0.05em;
+            line-height: 1.5;  
+
+            li{
+                margin-top: 24px;
+
+            }
+        }
+
+    }
+}
+
+.footer{
+    position: relative;
+    margin-top: 219px;
+    height: 264px;
+    background-color: #6F6565;
+
+    span{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 8rem;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+    }
+}
+
+@media screen and (max-width: 735px){
+   
+    $wrapp: 91.2%;
+
+    .wrapp{
+        width: $wrapp;
+    }
+
+    .section-ttl{
+        h2{
+            font-size: 38px;
+        }
+    }
+
+    body{
+        font-size: 1.2rem;
+    }
+
+    .header{
+
+        .logo{
+            display: block;
+            width: $wrapp;
+            padding-left: 0;
+            margin: 0 auto;
+        }
+
+        .navber{
+            display: none;
+        }
+        // -------------------humberger-------------------------------
+        .humberger{
+            display: block;
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            z-index: 3;
+
+            @mixin humberger-line{
+                width: 35px;
+                height: 3px;
+                background-color: #101010;
+                transition: all .3s ease-in-out;
+                -webkit-transition: all .3s ease-in-out;
+            }
+            &-line{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include humberger-line;
+            }
+            &-line:before{
+                position: absolute;
+                top: -12px;
+                left: 0px;
+                content: '';
+                @include humberger-line;
+            }
+            &-line:after{
+                position: absolute;
+                top: 12px;
+                left: 0;
+                content: '';
+                @include humberger-line;
+            }
+        }
+
+        .outline{
+            width: 80px;
+            height: 80px;
+            background-color: #fff;
+            // background-color: #666;
+            // border-radius: 50%;
+        }
+
+        .humberger.trigger{
+            .humberger-line{
+                background-color: transparent;
+            }
+             .humberger-line:before{
+                transform: rotate(-45deg);
+                top: 0px;
+            }
+            .humberger-line:after{
+                transform: rotate(45deg);
+                top: 0px;
+            }
+            .outline{
+                background-color: transparent;  
+            }
+        }
+
+
+
+        .navigation{
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+
+            .navber-sp{
+                display: none;
+                width: 80%;
+                height: 100vh;
+                background-color: rgba(255, 255, 255, 0.95);
+                padding: 110px 0 0 40px;
+                box-sizing: border-box;
+                
+                li{
+                    font-size: 2.4rem;
+                    margin-top: 37px;
+
+                    a{
+                        color: #000;
+                    }
+                }
+            }
+            .nav-gray{
+                display: none;
+                width: 20%;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        // -------------------/humberger------------------------------
+
+        .heroImg{
+            .wrapp{
+                padding-top: 22%;
+
+                h1{
+                    font-size: 4rem;
+                    color: #121212;
+                }
+                p{
+                    margin-top: 8px;
+                    font-size: 1.6rem;
+                }
+                
+            }
+            .arrow{
+                &:after{
+                    bottom: 17px;
+                }
+            }
+        }
+    }
+
+    .about{
+        padding-top: 103px;
+        // ==========[修正]flexの解除は display: block; でやらない！============
+        flex-direction: column;
+    
+        &-content{
+            max-width: 100%;
+            padding: 0;
+            background-color: transparent;
+            border: none;
+    
+            p{
+                font-size: 2rem;
+            }
+        }        
+        &-img{
+            width: 100%;
+            margin-left: 0;
+            margin-top: 22px;
+        }
+    }
+
+    .item{
+        padding-top: 127px;
+        ul{
+ // ==========[修正]flexの解除は display: block; でやらない！============
+            flex-direction: column;
+            margin-top: 32px;
+
+            li{
+                width: 100%;
+                
+                &:not(:first-of-type){
+                    margin-left: 0;
+                    margin-top: 55px;
+                }
+                &:nth-of-type(n+3){
+                    display: none;
+                }
+    
+                h3{
+                    margin-top: 23px;
+                }
+                p{
+                    margin-top: 18px;
+                    font-size: 2.4rem;
+                }
+                span{
+                    margin-top: 14px;
+                } 
+            } 
+           
+        }
+    }
+
+    .price{
+        background-image: url(../img/pc/jazmin-quaynor-470729-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+
+        padding-top: 48px;
+        padding-bottom: 49px;
+        margin-top: 50px;
+        
+        .wrapp{
+            .price-content{
+                padding: 64px 58px 67px 57px;
+                margin: 0 auto;
+            }
+        
+            .price-img{
+                display: none;
+            }
+        }
+    }
+
+    .blog{
+        margin-top: 0;
+        padding: 94px 0 109px 0;
+    
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+    
+            li{
+                width: calc((100% - 7px)/2);
+                margin-top: 32px;
+    
+                time{
+                    margin-top: 8px;
+                }
+                span{
+                    margin-top: 8px;
+                }
+            }
+            li:not(:first-of-type){
+                margin-left: 0;
+            }
+
+            // これいらない。justify-content: space-between;と width: calc((100% - 7px)/2) でしっかり7pxのマージンとれてる
+            // li:nth-of-type(2n){
+            //     margin-left: 7px;
+            // }
+
+            li:nth-of-type(n+4){
+                display: block;
+            }
+        }
+    }
+
+    .access{
+        padding-top: 94px;
+    
+        .map-wrapp{
+            flex-direction: column;
+        
+            dl{
+                margin-top: 44px;
+                  
+                dt{
+                    font-size: 1.8rem;
+                    &:not(:first-of-type){
+                        margin-top: 24px;
+                    }
+                }
+                dd{
+                    margin-top: 8px;
+                }
+            }
+            .map{
+                width: 100%;
+                
+                .map-inner{
+
+                    iframe{
+                        top: 73px;
+                    }  
+                }
+            }
+        }
+    
+        &-guide{
+            margin: 110px  auto 0;
+            max-width: 751px;
+            
+            p{
+                font-size: 2.4rem;
+            }
+            ol{
+                margin-top: 31px;
+                letter-spacing: 0.05em;
+                line-height: 2;  
+    
+                li{
+                    margin-top: 24px;
+    
+                }
+            }
+        }
+    }
+
+    .footer{
+        margin-top: 83px;
+        height: 182px;
+    
+        span{
+            font-size: 4rem;
+        }
+    }
+
+}

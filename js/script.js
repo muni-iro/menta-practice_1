@@ -1,0 +1,10 @@
+$(document).ready(function(){
+    $(".humberger").on("click",function(){
+        $(this).toggleClass("trigger");
+        $(".navber-sp,.nav-gray").fadeToggle(500);
+    });
+    $(".nav-gray").on("click",function(){
+        $(".humberger").removeClass("trigger");
+        $(".navber-sp,.nav-gray").fadeToggle(500);
+    });
+});
